@@ -1,4 +1,7 @@
 import streamlit as st
+import pandas as pd
+import numpy as np
 
-st.title('This is a title')
-st.title('_Streamlit_ is :blue[cool] :sunglasses:')
+df = pd.DataFrame(np.random.randn(10, 5), columns=("col %d" % i for i in range(5)))
+
+st.table(df)
